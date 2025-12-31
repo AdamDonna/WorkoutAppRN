@@ -1,0 +1,54 @@
+<svg width="300" height="400" viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="300" height="400" fill="#f8f9fa"/>
+  
+  <!-- Floor -->
+  <rect x="0" y="380" width="300" height="20" fill="#e9ecef"/>
+  
+  <!-- Bench/Platform -->
+  <rect x="200" y="320" width="80" height="60" rx="5" fill="#6c757d"/>
+  <rect x="190" y="310" width="100" height="10" rx="5" fill="#495057"/>
+  
+  <!-- Figure -->
+  <!-- Head -->
+  <circle cx="120" cy="80" r="18" fill="#fdbcb4"/>
+  
+  <!-- Torso (upright) -->
+  <rect x="110" y="98" width="20" height="50" rx="10" fill="#007bff"/>
+  
+  <!-- Arms for balance -->
+  <rect x="95" y="105" width="12" height="30" rx="6" fill="#fdbcb4" transform="rotate(-10 101 120)"/>
+  <rect x="123" y="105" width="12" height="30" rx="6" fill="#fdbcb4" transform="rotate(10 129 120)"/>
+  
+  <!-- Hands -->
+  <circle cx="98" cy="135" r="5" fill="#fdbcb4"/>
+  <circle cx="132" cy="135" r="5" fill="#fdbcb4"/>
+  
+  <!-- Front leg (working leg) -->
+  <rect x="110" y="148" width="14" height="40" rx="7" fill="#fdbcb4" transform="rotate(-5 117 168)"/>
+  <rect x="108" y="185" width="14" height="35" rx="7" fill="#fdbcb4"/>
+  
+  <!-- Rear leg (elevated on bench) -->
+  <rect x="150" y="160" width="14" height="45" rx="7" fill="#fdbcb4" transform="rotate(25 157 182.5)"/>
+  <rect x="175" y="190" width="14" height="30" rx="7" fill="#fdbcb4" transform="rotate(15 182 205)"/>
+  
+  <!-- Front foot -->
+  <ellipse cx="110" cy="230" rx="12" ry="6" fill="#2c2c2c"/>
+  
+  <!-- Rear foot on bench -->
+  <ellipse cx="205" cy="310" rx="10" ry="5" fill="#2c2c2c"/>
+  
+  <!-- Movement arrows -->
+  <path d="M80 180 L80 210 L75 205 M80 210 L85 205" stroke="#28a745" stroke-width="2" fill="none"/>
+  <text x="40" y="200" fill="#28a745" font-family="Arial, sans-serif" font-size="12">Down</text>
+  
+  <path d="M80 210 L80 180 L75 185 M80 180 L85 185" stroke="#007bff" stroke-width="2" fill="none"/>
+  <text x="45" y="170" fill="#007bff" font-family="Arial, sans-serif" font-size="12">Up</text>
+  
+  <!-- Title -->
+  <text x="150" y="30" text-anchor="middle" fill="#2c2c2c" font-family="Arial, sans-serif" font-size="18" font-weight="bold">Bulgarian Split Squat</text>
+  
+  <!-- Instructions -->
+  <text x="150" y="350" text-anchor="middle" fill="#6c757d" font-family="Arial, sans-serif" font-size="12">Rear foot elevated on bench</text>
+  <text x="150" y="365" text-anchor="middle" fill="#6c757d" font-family="Arial, sans-serif" font-size="12">Lower until front thigh is parallel</text>
+</svg>

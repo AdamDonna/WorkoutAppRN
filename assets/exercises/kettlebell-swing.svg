@@ -1,0 +1,54 @@
+<svg width="300" height="400" viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="300" height="400" fill="#f8f9fa"/>
+  
+  <!-- Floor -->
+  <rect x="0" y="380" width="300" height="20" fill="#e9ecef"/>
+  
+  <!-- Kettlebell at swing position -->
+  <circle cx="150" cy="120" r="20" fill="#2c2c2c"/>
+  <rect x="130" y="100" width="40" height="12" rx="6" fill="#495057"/>
+  
+  <!-- Figure -->
+  <!-- Head -->
+  <circle cx="150" cy="80" r="18" fill="#fdbcb4"/>
+  
+  <!-- Torso (slightly forward lean) -->
+  <rect x="138" y="98" width="25" height="55" rx="12" fill="#007bff" transform="rotate(10 150.5 125.5)"/>
+  
+  <!-- Arms extended upward -->
+  <rect x="125" y="85" width="12" height="35" rx="6" fill="#fdbcb4" transform="rotate(-30 131 102.5)"/>
+  <rect x="163" y="85" width="12" height="35" rx="6" fill="#fdbcb4" transform="rotate(30 169 102.5)"/>
+  
+  <!-- Hands gripping kettlebell -->
+  <circle cx="140" cy="105" r="6" fill="#fdbcb4"/>
+  <circle cx="160" cy="105" r="6" fill="#fdbcb4"/>
+  
+  <!-- Legs in athletic stance -->
+  <rect x="130" y="150" width="14" height="40" rx="7" fill="#fdbcb4" transform="rotate(-8 137 170)"/>
+  <rect x="156" y="150" width="14" height="40" rx="7" fill="#fdbcb4" transform="rotate(8 163 170)"/>
+  
+  <!-- Lower legs -->
+  <rect x="125" y="185" width="14" height="32" rx="7" fill="#fdbcb4"/>
+  <rect x="161" y="185" width="14" height="32" rx="7" fill="#fdbcb4"/>
+  
+  <!-- Feet -->
+  <ellipse cx="125" cy="225" rx="12" ry="6" fill="#2c2c2c"/>
+  <ellipse cx="175" cy="225" rx="12" ry="6" fill="#2c2c2c"/>
+  
+  <!-- Swing motion arc -->
+  <path d="M150 200 Q120 140 150 80" stroke="#28a745" stroke-width="2" fill="none" stroke-dasharray="5,5"/>
+  <path d="M150 200 Q180 140 150 80" stroke="#28a745" stroke-width="2" fill="none" stroke-dasharray="5,5"/>
+  
+  <!-- Movement arrow -->
+  <path d="M200 120 Q220 100 240 120" stroke="#dc3545" stroke-width="3" fill="none"/>
+  <text x="205" y="140" fill="#dc3545" font-family="Arial, sans-serif" font-size="12">Swing Up</text>
+  
+  <!-- Title -->
+  <text x="150" y="30" text-anchor="middle" fill="#2c2c2c" font-family="Arial, sans-serif" font-size="18" font-weight="bold">Kettlebell Swing</text>
+  
+  <!-- Instructions -->
+  <text x="150" y="280" text-anchor="middle" fill="#6c757d" font-family="Arial, sans-serif" font-size="12">Hip hinge movement</text>
+  <text x="150" y="295" text-anchor="middle" fill="#6c757d" font-family="Arial, sans-serif" font-size="12">Drive hips forward explosively</text>
+  <text x="150" y="310" text-anchor="middle" fill="#6c757d" font-family="Arial, sans-serif" font-size="12">Kettlebell swings to shoulder height</text>
+</svg>

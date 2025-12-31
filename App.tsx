@@ -8,8 +8,10 @@ import {
   SafeAreaView,
   StatusBar,
 } from 'react-native';
+import { SvgXml } from 'react-native-svg';
 import { Audio } from 'expo-av';
 import * as Haptics from 'expo-haptics';
+import { getExerciseImage } from './assets/exercises/exerciseImages';
 
 // Types
 enum BlockType {
@@ -432,6 +434,16 @@ export default function App() {
         <View style={styles.instructionSection}>
           <Text style={styles.instructionLabel}>Current Exercise</Text>
           <View style={styles.instructionCard}>
+            {currentWorkout && (() => {
+              const currentExercise = currentWorkout.blocks[currentBlockIndex]?.exercises[currentExerciseIndex];
+              const exerciseImageSvg = currentExercise ? getExerciseImage(currentExercise.name) : null;
+              
+              return exerciseImageSvg ? (
+                <View style={styles.exerciseImageContainer}>
+                  <SvgXml xml={exerciseImageSvg} width={200} height={250} />
+                </View>
+              ) : null;
+            })()}
             <Text style={styles.instructionText}>{currentInstruction}</Text>
           </View>
         </View>
@@ -689,6 +701,15 @@ const styles = StyleSheet.create({
     fontWeight: '500',
     textAlign: 'center',
     lineHeight: 26,
+  },
+  exerciseImageContainer: {
+    alignItems: 'center',
+    marginBottom: 16,
+  },
+  exerciseImage: {
+    width: 120,
+    height: 120,
+    borderRadius: 8,
   },
   controls: {
     flexDirection: 'row',

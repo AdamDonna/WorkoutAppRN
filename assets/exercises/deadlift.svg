@@ -1,0 +1,56 @@
+<svg width="300" height="400" viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="300" height="400" fill="#f8f9fa"/>
+  
+  <!-- Floor -->
+  <rect x="0" y="380" width="300" height="20" fill="#e9ecef"/>
+  
+  <!-- Barbell/Trap bar -->
+  <rect x="100" y="310" width="100" height="8" rx="4" fill="#2c2c2c"/>
+  <!-- Weight plates -->
+  <rect x="90" y="300" width="20" height="28" rx="3" fill="#495057"/>
+  <rect x="190" y="300" width="20" height="28" rx="3" fill="#495057"/>
+  
+  <!-- Figure in deadlift position -->
+  <!-- Head -->
+  <circle cx="150" cy="100" r="18" fill="#fdbcb4"/>
+  
+  <!-- Torso (hinged forward) -->
+  <rect x="140" y="118" width="20" height="55" rx="10" fill="#007bff" transform="rotate(20 150 145.5)"/>
+  
+  <!-- Arms reaching down to bar -->
+  <rect x="130" y="140" width="12" height="40" rx="6" fill="#fdbcb4" transform="rotate(45 136 160)"/>
+  <rect x="158" y="140" width="12" height="40" rx="6" fill="#fdbcb4" transform="rotate(-45 164 160)"/>
+  
+  <!-- Hands gripping bar -->
+  <circle cx="145" cy="180" r="5" fill="#fdbcb4"/>
+  <circle cx="155" cy="180" r="5" fill="#fdbcb4"/>
+  
+  <!-- Legs bent at hips and knees -->
+  <rect x="135" y="170" width="14" height="35" rx="7" fill="#fdbcb4" transform="rotate(-15 142 187.5)"/>
+  <rect x="151" y="170" width="14" height="35" rx="7" fill="#fdbcb4" transform="rotate(15 158 187.5)"/>
+  
+  <!-- Lower legs -->
+  <rect x="130" y="200" width="14" height="30" rx="7" fill="#fdbcb4"/>
+  <rect x="156" y="200" width="14" height="30" rx="7" fill="#fdbcb4"/>
+  
+  <!-- Feet -->
+  <ellipse cx="130" cy="240" rx="12" ry="6" fill="#2c2c2c"/>
+  <ellipse cx="170" cy="240" rx="12" ry="6" fill="#2c2c2c"/>
+  
+  <!-- Movement arrows -->
+  <path d="M220 200 L220 150 L215 155 M220 150 L225 155" stroke="#007bff" stroke-width="3" fill="none"/>
+  <text x="230" y="175" fill="#007bff" font-family="Arial, sans-serif" font-size="12" font-weight="bold">LIFT</text>
+  
+  <!-- Back position indicator -->
+  <path d="M125 130 L175 150" stroke="#dc3545" stroke-width="2" fill="none"/>
+  <text x="85" y="125" fill="#dc3545" font-family="Arial, sans-serif" font-size="10">Neutral spine</text>
+  
+  <!-- Title -->
+  <text x="150" y="30" text-anchor="middle" fill="#2c2c2c" font-family="Arial, sans-serif" font-size="18" font-weight="bold">Deadlift</text>
+  
+  <!-- Instructions -->
+  <text x="150" y="280" text-anchor="middle" fill="#6c757d" font-family="Arial, sans-serif" font-size="12">Hip hinge pattern</text>
+  <text x="150" y="295" text-anchor="middle" fill="#6c757d" font-family="Arial, sans-serif" font-size="12">Keep back neutral, chest up</text>
+  <text x="150" y="310" text-anchor="middle" fill="#6c757d" font-family="Arial, sans-serif" font-size="12">Drive through heels</text>
+</svg>
