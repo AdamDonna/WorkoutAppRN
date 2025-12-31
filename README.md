@@ -49,15 +49,31 @@ npm run web
 ```
 Then open http://localhost:8081 in your browser
 
-#### Option 2: Mobile Device
+#### Option 2: Development Mode (Requires internet)
 ```bash
 npm start
 ```
-1. Install Expo Go on your device
-2. Scan the QR code that appears in the terminal
-3. App will load on your device
+Scan the QR code with your camera (iOS) or Expo Go app (Android)
 
-#### Option 3: iOS Simulator (macOS only)
+#### Option 3: Offline Mobile App (Production-like)
+Build a standalone app for your phone that works completely offline:
+
+```bash
+# Login to Expo (required for builds)
+eas login
+
+# Build for iPhone
+eas build --profile development --platform ios
+
+# Build for Android
+eas build --profile development --platform android
+```
+
+The build will be available for download once complete. Install it directly on your device:
+- **iOS**: Install via TestFlight link or direct installation  
+- **Android**: Download and install the .apk file
+
+#### Option 4: iOS Simulator (macOS only)
 ```bash
 npm run ios
 ```
