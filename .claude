@@ -1,0 +1,159 @@
+# Workout Execution App - Claude Context
+
+This is a timer-driven workout execution app built with React Native and Expo. The app acts as a session conductor for a fixed 3-day strength + conditioning program.
+
+## Project Overview
+
+**Purpose**: Build a guided workout application that walks users through a fixed 3-day strength + conditioning program using timers, EMOM logic, interval blocks, circuits, power blocks, and finishers.
+
+**Role**: Session conductor, not a coach. Tell user what to do, control timing, track rounds, require minimal interaction during training.
+
+## Non-Negotiable Design Rules
+
+- ❌ Do not change exercises
+- ❌ Do not re-order workouts  
+- ❌ Do not simplify timers
+- ❌ Do not combine blocks
+- ❌ Do not "optimize" training
+- ❌ No AI decisions during workouts
+- ✅ Offline-first design
+- ✅ Timer-driven experience
+- ✅ Preserve original workout exactly as written
+
+## Technical Architecture
+
+**Platform**: React Native with Expo SDK 54
+**Structure**: Single-file app in App.tsx with all components and logic
+**State Management**: React hooks (useState, useEffect, useRef)
+**Timer System**: JavaScript setInterval with proper cleanup
+**Audio/Haptics**: Expo Audio & Expo Haptics for feedback
+**Cross-platform**: Web support via react-native-web
+
+## Canonical Workout Structure
+
+Each session follows this exact format:
+1. **Warm-up** (5 min)
+2. **Power block** (8–10 min)  
+3. **Strength + conditioning** (20 min)
+4. **Finisher** (5–7 min)
+**Total**: 40–45 minutes
+
+## Timer Types (Required)
+
+1. **Countdown**: Fixed duration timers
+2. **Interval**: Work/rest cycling  
+3. **EMOM**: Every minute on the minute execution
+4. **Rest**: Between sets or rounds
+
+## Block Types (Required)
+
+1. **Warmup**: 5-minute mobility and movement prep
+2. **Power**: Explosive strength work with rest periods
+3. **Circuit**: Multi-exercise sequences with minimal rest
+4. **EMOM**: Per-minute structured work
+5. **Finisher**: Conditioning intervals or continuous work
+
+## Workout Specifications (EXACT - DO NOT MODIFY)
+
+### Day 1 - Lower Body Power + Engine
+- **Warm-up**: Row/Ski (2 min) + Mobility + Goblet squats + Glute bridges
+- **Power**: Trap bar/KB deadlifts (4-5 sets × 3 reps, 90s rest, explosive concentric)
+- **Circuit** (4 rounds): Bulgarian split squats (8/leg) → KB swings (20) → Landmine rows (10/side) → Ski erg (45s)
+- **Finisher**: Row/Ski intervals (30s hard/30s easy × 5 rounds)
+
+### Day 2 - Upper Body Power + Conditioning  
+- **Warm-up**: Band pull-aparts + Scap push-ups + KB halos
+- **Power**: Landmine push press (5 × 3-5 reps)
+- **Circuit** (4 rounds): Pull-ups/rows (8-10) → Floor press/push-ups (12) → Bulgarian bag clean (10) → Ski erg (30s)
+- **EMOM × 5**: Minute 1: KB snatches (10), Minute 2: Push-ups (10)
+
+### Day 3 - Full Body Engine
+- **Warm-up**: Row + mobility
+- **Power**: Landmine clean/box jump (5 × 3 reps)  
+- **Circuit** (5 rounds, 90s rest): RDL (6) → Row (6) → Front squat (6) → Push press (6) - no rest inside round
+- **Finisher**: Bulgarian bag carries (5-6 min continuous) - bear hug, over-shoulder, front carry
+
+## Equipment Context
+
+App assumes user owns:
+- Squat rack
+- SkiErg  
+- Rower
+- Kettlebells
+- Landmine attachment
+- Bulgarian bag
+
+No substitutions unless explicitly stated.
+
+## Key Features Implemented
+
+**Timer System**:
+- Automatic progression through exercises and blocks
+- 5-second countdown warnings (orange timer + "Get Ready!")
+- Haptic feedback on mobile devices
+- Visual progress tracking
+
+**User Controls**:
+- ⏸️/▶️ Pause/Resume
+- ⏭️ Skip current exercise  
+- ⏹️ End workout
+- Minimal interaction design
+
+**Audio/Visual Feedback**:
+- Timer beeps/haptics at 5-second mark
+- Success haptics on completion
+- Color-coded block types
+- Large, readable timer display
+
+## Development Guidelines
+
+**When making changes**:
+1. Always preserve exact workout structure
+2. Maintain timer-driven experience
+3. Keep offline-first design
+4. Test all timer types thoroughly
+5. Ensure haptic/audio feedback works
+6. Verify cross-platform compatibility
+
+**File Structure**:
+- `App.tsx` - Main app with all components and logic
+- `package.json` - Dependencies and scripts
+- `README.md` - Comprehensive setup and usage guide
+- `.claude` - This context file
+
+**Dependencies**:
+- expo (~54.0.30)
+- expo-av (audio feedback)
+- expo-haptics (tactile feedback)  
+- react-native-web (web support)
+- react-dom (web rendering)
+
+## Testing Checklist
+
+- [ ] All 3 workouts load correctly
+- [ ] Timers count down accurately  
+- [ ] 5-second warnings appear
+- [ ] Automatic progression works
+- [ ] Pause/resume functions properly
+- [ ] Skip advances correctly
+- [ ] Progress bar updates
+- [ ] Haptic feedback works on mobile
+- [ ] Web version runs in browser
+- [ ] No modifications to workout content
+
+## Success Criteria
+
+A developer should be able to:
+- Build the app without guessing
+- Match workouts exactly as specified
+- Run sessions hands-free with timer automation
+- Use timers accurately for all block types
+- Train without friction or interruption
+
+## Important Notes
+
+- This is NOT a creative task - accuracy and fidelity are more important than elegance
+- Default to precision over convenience
+- If anything is ambiguous, preserve the original workout exactly as written
+- App acts as conductor, not coach
+- Minimal interaction philosophy throughout
